@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  fpm:
+    build:
+      context: ./
+      dockerfile: fpm.Dockerfile
+#    Mount code into container for ease of testing:
+#    volumes:
+#      - ./:/var/www/html
+  nginx:
+    build:
+      context: ./
+      dockerfile: nginx.Dockerfile
+    ports:
+      - "80:80"

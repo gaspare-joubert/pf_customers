@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Customers{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        body {
+            background-color: #1b2332;
+            padding: 3em;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        form {
+            margin: 0 auto;
+        }
+
+        #form {
+            width: 40em;
+        }
+
+        label,
+        input {
+            display: inline-block;
+        }
+
+        label {
+            width: 30%;
+            text-align: right;
+        }
+
+        label+input {
+            width: 30%;
+            margin: 0 30% 0 4%;
+        }
+
+        input {
+            width: 60%;
+        }
+
+        button {
+            float: right;
+        }
+
+        a {
+            color: cornflowerblue;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<h1>Customer</h1>
+
+    {{ form(form) }}
+    <br>
+    <a href="/">List</a>
+{% endblock %}

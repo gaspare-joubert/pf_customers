@@ -1,0 +1,26 @@
+{
+  "9eb08ee1-2b96-45c9-b87f-b57bba8a820b": {
+    "name": "Test Logistics Inc.",
+    "address": "74 Testing Road",
+    "city": "Edinburgh",
+    "country": "UK"
+  },
+  "22d2b3e9-6bec-4d61-be5f-ffc7986b5c0f": {
+    "name": "Demo Technology Limited",
+    "address": "23 Technology Avenue",
+    "city": "Edinburgh",
+    "country": "UK"
+  },
+  "55baab3b-d0c5-4dcd-9339-713ca6ad9e5f": {
+    "name": "Testing & Sons Logistics",
+    "address": "1 Logistics Street",
+    "city": "London",
+    "country": "UK"
+  },
+  "272263d6-c867-4b42-bcb9-a2b5cdc0df2d": {
+    "name": "Demo GmbH",
+    "address": "1 Logistik Stra\u00dfe",
+    "city": "Z\u00fcrich",
+    "country": "CH"
+  }
+}

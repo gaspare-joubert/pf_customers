@@ -1,0 +1,6 @@
+.git
+.gitlab-ci.yml
+.gitlab
+Dockerfile
+vendor
+var

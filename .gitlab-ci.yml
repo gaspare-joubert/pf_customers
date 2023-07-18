@@ -1,0 +1,15 @@
+stages:
+  - Verify
+
+Static Analysis:
+  stage: Verify
+  image: docker:24.0.2
+  tags:
+    - dind-20
+  services:
+    - docker:24.0.2-dind
+  script:
+    - docker build . -f fpm.Dockerfile -t ${CI_REGISTRY_IMAGE}/fpm:commit-${CI_COMMIT_SHA}
+    - docker run ${CI_REGISTRY_IMAGE}/fpm:commit-${CI_COMMIT_SHA} vendor/bin/psalm --show-info=false
+
+
