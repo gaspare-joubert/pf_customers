@@ -12,6 +12,7 @@ final class Customer implements EntityInterface
     private string $address = '';
     private string $city = '';
     private string $country = '';
+    private string $email = '';
 
     public function __construct(string $id = null)
     {
@@ -71,10 +72,23 @@ final class Customer implements EntityInterface
         return $this;
     }
 
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): Customer
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
     public static function createFromArray(array $input): static
     {
         return (new Customer($input['id']))
             ->setName($input['name'])
+            ->setEmail($input['email'])
             ->setAddress($input['address'])
             ->setCity($input['city'])
             ->setCountry($input['country']);
@@ -87,7 +101,8 @@ final class Customer implements EntityInterface
             'name' => $this->getName(),
             'address' => $this->getAddress(),
             'city' => $this->getCity(),
-            'country' => $this->getCountry()
+            'country' => $this->getCountry(),
+            'email' => $this->getEmail()
         ];
     }
 }
