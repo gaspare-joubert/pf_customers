@@ -33,13 +33,14 @@
     <table>
         <thead>
             <tr>
-                <td>Name</td><td>Address</td><td>City</td><td>Country</td>
+                <td>Name</td><td>Email</td><td>Address</td><td>City</td><td>Country</td>
             </tr>
         </thead>
         <tbody>
         {% for customer in customers %}
             <tr>
                 <td><a href="/customer/edit/{{ customer.id }}">{{ customer.name }}</a></td>
+                <td>{{ customer.email }}</td>
                 <td>{{ customer.address }}</td>
                 <td>{{  customer.city }}</td>
                 <td>{{  customer.country }}</td>
