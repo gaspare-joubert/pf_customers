@@ -8,6 +8,7 @@ use Podfather\Techtest\Lookup\Customer as CustomerLookup;
 use Podfather\Techtest\Storage;
 use Psr\Container\ContainerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormInterface;
@@ -61,6 +62,7 @@ final class CustomerController extends AbstractController
     {
         return $this->createFormBuilder($customer)
                     ->add('Name', TextType::class)
+                    ->add('Email', EmailType::class)
                     ->add('Address', TextType::class)
                     ->add('City', TextType::class)
                     ->add('Country', TextType::class)
