@@ -62,7 +62,7 @@ final class CustomerController extends AbstractController
     {
         return $this->createFormBuilder($customer)
                     ->add('Name', TextType::class)
-                    ->add('Email', EmailType::class)
+                    ->add('Email', EmailType::class, array('label' => 'E-mail'))
                     ->add('Address', TextType::class)
                     ->add('City', TextType::class)
                     ->add('Country', TextType::class)
